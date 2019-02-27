@@ -1,5 +1,8 @@
 // check out http://www.w3schools.com/js/js_dates.asp
 
+
+
+
   var d = new Date();
 
   var day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
@@ -62,7 +65,8 @@ console.log(hour);
 var n = day[d.getDay()];
 var m = month[d.getMonth()];
 var min = d.getMinutes();
-var sec = d.getSeconds()
+var sec = d.getSeconds();
+
 
 if (min>=0 && min<=9){
   min ="0" + min;
@@ -75,6 +79,102 @@ if (sec>=0 && sec<=9){
   }else {
     sec = sec;
   }
+
+  
 document.getElementById("today").innerHTML = n + ", " + " " + m + " " + d.getFullYear();
 
-document.getElementById("time").innerHTML = hour + ":" + min + ":" + sec + amPm;
+document.getElementById("time").innerHTML = hour + ":" + min + ":";
+
+document.getElementById("seconds").innerHTML = sec;
+
+document.getElementById("dayNight").innerHTML = amPm;
+
+
+
+
+
+
+function getStylesheet() {
+  var currentDay = new Date().getDay();
+  var weekDayBGL = document.getElementById('dayL');  
+  var weekDayBGR = document.getElementById('dayM');  
+  
+  /*trouble shooter finds you should style towards class since week 4 */
+  var names = " ";
+  for(var i=0; i<day.length; i++) {
+    names = day;
+    console.log(day[i]);
+    console.log(names[i]);
+
+
+console.log(names);
+console.log(this.name[i]);
+console.log(currentDay);
+
+document.getElementsByClassName("changeD")[i].onmouseover = function() 
+{
+    this.style.color = "red";
+    console.log(names);
+     console.log((this).name);
+var camp = (this).name
+
+  if (currentDay === 0 || camp === "0") {//sunday
+    weekDayBGL.innerHTML = "<img src='images/a.png' />";
+    weekDayBGR.innerHTML = "<img src='images/sun.png' />";
+  }
+  if (currentDay === 1 || camp === "1") {//monday
+    weekDayBGL.innerHTML = "<img src='images/a.png' />";
+    weekDayBGR.innerHTML = "<img src='images/v.png' />";
+
+  }
+  if (currentDay === 2 || camp === "2") {//tuesday
+    weekDayBGL.innerHTML = "<img src='images/c.png' />";
+    weekDayBGR.innerHTML = "<img src='images/w.png' />";
+  }
+
+  if (currentDay === 3 || camp === "3") {//wednesday
+    weekDayBGL.innerHTML = "<img src='images/a.png' />";
+    weekDayBGR.innerHTML = "<img src='images/mercury.png' />";
+  }
+
+  if (currentDay === 4 || camp === "4") {//thursday
+    weekDayBGL.innerHTML = "<img src='images/g.png' />";
+    weekDayBGR.innerHTML = "<img src='images/jupiter.png' />";
+  }
+
+  if (currentDay === 5 || camp === "5") {//friday
+    weekDayBGL.innerHTML = "<img src='images/f.png' />";
+    weekDayBGR.innerHTML = "<img src='images/venus.png' />";
+  }
+
+  if (currentDay === 6 || camp === "6") {//saturday
+    weekDayBGL.innerHTML = "<img src='images/b.png'/>";
+    weekDayBGR.innerHTML = "<img src='images/saturn2.png' />";
+  }
+
+}
+
+document.getElementsByClassName("changeD")[i].onmouseout = function() 
+{
+    this.style.color = "white";
+}
+
+
+};
+
+
+}
+getStylesheet();
+
+
+function hiding() {
+  var x = document.getElementById("hidden");
+  var y = document.getElementById("height100");
+  if (x.style.display === "none" && y.style.backgroundColor === "blue") {
+    x.style.display = "block";
+    y.style.backgroundColor = "blue";
+  } else {
+    x.style.display = "none";
+    y.style.backgroundColor = "blue";
+  }
+}
