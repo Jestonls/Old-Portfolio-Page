@@ -122,50 +122,88 @@ var camp = (this).name
     weekDayBGL.innerHTML = "<img src='images/a.png' />";
     weekDayBGR.innerHTML = "<img src='images/sun.png' />";
   }
+  else{
+    currentDay = camp;
+  }
+
   if (currentDay === 1 || camp === "1") {//monday
     weekDayBGL.innerHTML = "<img src='images/a.png' />";
-    weekDayBGR.innerHTML = "<img src='images/v.png' />";
+    weekDayBGR.innerHTML = "<img src='images/moon.png' />";
 
   }
+  else{
+    currentDay = camp;
+  }
+
   if (currentDay === 2 || camp === "2") {//tuesday
     weekDayBGL.innerHTML = "<img src='images/c.png' />";
-    weekDayBGR.innerHTML = "<img src='images/w.png' />";
+    weekDayBGR.innerHTML = "<img src='images/mars.png' />";
+  }
+  else{
+    currentDay = camp;
   }
 
   if (currentDay === 3 || camp === "3") {//wednesday
     weekDayBGL.innerHTML = "<img src='images/a.png' />";
     weekDayBGR.innerHTML = "<img src='images/mercury.png' />";
   }
+  else{
+    currentDay = camp;
+  }
 
   if (currentDay === 4 || camp === "4") {//thursday
     weekDayBGL.innerHTML = "<img src='images/g.png' />";
     weekDayBGR.innerHTML = "<img src='images/jupiter.png' />";
+  }
+  else{
+    currentDay = camp;
   }
 
   if (currentDay === 5 || camp === "5") {//friday
     weekDayBGL.innerHTML = "<img src='images/f.png' />";
     weekDayBGR.innerHTML = "<img src='images/venus.png' />";
   }
+  else{
+    currentDay = camp;
+  }
 
   if (currentDay === 6 || camp === "6") {//saturday
     weekDayBGL.innerHTML = "<img src='images/b.png'/>";
     weekDayBGR.innerHTML = "<img src='images/saturn2.png' />";
   }
-
+  else{
+    currentDay = camp;
+  }
 }
 
 document.getElementsByClassName("changeD")[i].onmouseout = function() 
-{
+    {
     this.style.color = "white";
-}
-
-
+    }
 };
-
-
 }
+
 getStylesheet();
 
+
+/*
+$( "li" ).hover(
+  function() {
+    $( this ).append( $( "<span> ***</span>" ) );
+  }, function() {
+    $( this ).find( "span:last" ).remove();
+  }
+);
+
+
+ 
+$( "li.fade" ).hover(function() {
+  $( this ).fadeOut( 100 );
+  $( this ).fadeIn( 500 );
+});
+
+
+*/
 
 function hiding() {
   var x = document.getElementById("hidden");
@@ -178,3 +216,26 @@ function hiding() {
     y.style.backgroundColor = "blue";
   }
 }
+
+/*
+function hiding2() {
+  var x =   document.getElementById("hidden2").innerHTML='<object type="text/html" data="../unit-4-game/index.html" ></object>';
+  if (x) {
+    console.log("huh");
+  } else {
+    return;
+  }
+}
+
+
+function hiding3() {
+  var x = document.getElementById("hidden3");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+    
+  } else {
+    x.style.display = "none";
+  }
+}
+
+*/

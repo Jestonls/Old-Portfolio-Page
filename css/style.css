@@ -1,5 +1,5 @@
 a{
-    color: white;
+    color: lightblue;
 }
 
 a:hover{
@@ -16,6 +16,7 @@ a:hover{
     background-color: blue;
     min-width: 100%;
     border-bottom: solid white 3px;
+    height: 14vh;
 }
 
  body{
@@ -32,7 +33,7 @@ a:hover{
 
 .height100{
     position: relative;
-    top: 10vh;
+    top: 14vh;
     margin: 0 auto;
     padding: 0 auto;
     background-color: white;
@@ -286,9 +287,25 @@ border-left: dashed white 5px;
 
   #hidden{
       display: none;
-      background-color: black
+      background-color: black;
   }
 
-  #changeD{
+/*  #hidden2{
+    background-color: red;
+    min-width: 99vw;
+    min-height: 86vh;
+    position: absolute;
+}
+
+#hidden3{
+    display: none;
+    background-color: yellow;
+    min-width: 99vw;
+    min-height: 86vh;
+}
+*/
+
+
+#changeD{
     font-family: 'Courier New', Courier, monospace;
   }
