@@ -200,7 +200,7 @@ function hiding() {
 
 function hiding2() {
   var z =   document.getElementById("hidden2");
-  z.innerHTML='<object type="text/html" data="../unit-4-game/index.html" ></object>';
+  z.innerHTML='<object type="text/html" data="https://jestonls.github.io/Group-Project/index.html" ></object>';
   if (z.style.display === "none") {
     z.style.display = "block";
     console.log("Mmhmm");
@@ -212,7 +212,7 @@ function hiding2() {
 
 function hiding3() {
   var xy = document.getElementById("hidden3");
-  xy.innerHTML='<object type="text/html" data="../TriviaGame/index.html" ></object>';
+  xy.innerHTML='<object type="text/html" data="https://jestonls.github.io/TriviaGame/index.html" ></object>';
   if (xy.style.display === "none") {
     xy.style.display = "block";
     console.log("Mmhmm");
@@ -225,7 +225,7 @@ function hiding3() {
 
 function hiding4() {
   var z =   document.getElementById("hidden2");
-  z.innerHTML='<object type="text/html" data="../HW7/Giftastic/index.html" ></object>';
+  z.innerHTML='<object type="text/html" data="https://jestonls.github.io/Giftastic/index.html" ></object>';
   if (z.style.display === "none") {
     z.style.display = "block";
     console.log("Mmhmm");
@@ -233,3 +233,8 @@ function hiding4() {
     z.style.display = "none";
   }
 }
+
+
+//https://jestonls.github.io/unit-4-game/
+//https://jestonls.github.io/Bootstrap-Portfolio/
+//https://jestonls.github.io/Train/
