@@ -1,100 +1,6 @@
-.height100{
-    min-height: 99vh;
-    margin: 0 auto;
-    padding: 0 auto;
-    background-color: black;
-}
-
-
-.container{
-    min-width: 100%;
-}
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    color: #777777;
-    background-color: #111111;
-    background-repeat: repeat;
-}
-header{
-    position: fixed;
-   z-index: 2;
-   width: 100%;
-   opacity: .9;
-   border-bottom: 2px solid #cccccc;
-}
-
-
-nav{
-    position: relative;
-    display: inline-block;
-    right: 0;
-    padding: 30px;
-    text-align: right;
-    margin: 0 auto;
-}
-
-nav a{
-    padding: 16px;
-    color: #777777; 
-}
-
-nav a:hover{
-    color: orange;
-}
-
-h1{
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0 auto;
-    color: white;
-    display: inline-block;
-    padding: 20px 0px 20px 0px;
-    margin: 0 auto;
-    font-size: 28px;    
-}
-
-header h1{
-    padding: 26px;
-}
-
-
-.content{
-    position: relative;
-    background-color: #ffffff;
-    width: 90%;
-    margin: 0 auto;
-    border: solid 2px #dddddd;
-    padding: 20px;
-}
- 
-
-footer{
-    background-color: black;
-    display: inline-block;
-    position: relative;
-    bottom: 0px;
-    text-align: center;
-    padding: 20px 0px 5px 0px;
-    width: 100%;
-    border-top: solid orange 5px;
-    color: white;
-}
-
-section{
-    margin: 30 0 0 0px;
-}
-
-.name{
-    display: block;
-    color: red;
-    background-color: #ffffff;
-    border-bottom: solid 2px #cccccc;
-    margin: 0px 0px 20px 0px;
-}
-
 
 .list-group-item{
-    background-color: black;
+    background-color: white;
 }
 
 .list-group-item:hover{
@@ -102,86 +8,34 @@ section{
 }
 
 .carousel{
-  background-color:#000000;
-}
+    background-color:white;
+  }
+  
+
 .carousel-item{
-margin-bottom: 20px;
+    max-height: 50%;
+    overflow: hidden;
 }
 
-/*Contact Page*/
-textarea{
-    width: 100%;
-    height: 240px;
-    margin: 0 auto;
-    position: relative;
-    left: 0;
+.display{
+    height: 10%;
+    margin: 20% auto;
+} 
+
+.display2{
     display: block;
+    max-width: 100%;
+    margin: 0 auto;
+    position: absolute;
 }
 
-input{
-    width: 100%;
-}
 
-/*navGallery overflow scroll*/
-
-.navGallery{
-    overflow-y: scroll;
-    overflow-x: hidden;
-    margin: 0 0 0 0;
+.content{
+    height: 99vh; 
+    margin: 14vh auto; 
     position: relative;
-    display: inline-block;
-    height: 600px;
-    right: 0;
-    top: 30px;
 }
 
-.navListing{
-    margin: 0 0 0 0;
-    display: inline-block;
-    position: relative;
-    left: 0;
-    height: 600px;
-}
-
-.grey{
-    background-color: #555555;
-}
-
-.opacity{
-    opacity: .7;
-}
-
-.dropshadow{
-    text-shadow: 2px 2px black;
-}
-
-a.list-group-item.list-group-item-action.active{
-    background-color: #666666;
-}
-
-/* Use three `@media screen` tags, each with one of these `max-width`s: `980px`, `768px` and `640px`.*/
-
-@media screen and (max-width: 640px) {
-    body {
-    }
-  }
-  
-@media screen and (max-width: 768px) {
-    body {
-    }
-  }
-  
-@media screen and (max-width: 980px) {
-    body {
-    }
-  }
-
-  .display{
-      height: 100%;
-  }
-  
-
-  
 .blinking{
     animation:blinkingText 1.8s infinite;
 }
@@ -206,7 +60,76 @@ a.list-group-item.list-group-item-action.active{
     color: white;
 }
 
-.white{
-    color: white;
-    font-size: 20px;
+a{
+    color: lightblue;
 }
+
+a:hover{
+    color: aquamarine;
+}
+
+.navbar{
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    margin: 0;
+    z-index: 4;
+    padding: 10px;
+    background-color: white;
+    min-width: 100%;
+    border-bottom: solid white 3px;
+    height: 14vh;
+}
+
+ body{
+    background-color: blue;
+}
+
+
+.background{
+    position: absolute;
+    z-index: 0;
+    left: 0px;
+    width: 100%;
+}
+
+
+.foreground{
+    position: absolute;
+    z-index: 2;
+    left: 0px;
+    width: 100%;
+    color: aliceblue;
+    font-size: 40px;
+    font-weight: 900;
+    background-color: black;
+}
+
+#list-example{
+    min-height: 99%
+}
+
+.navGallery{
+    overflow: scroll;
+    max-height: 99%;
+    color: lightblue;
+    position: absolute;
+}
+
+.navGallery h4{
+    margin: 30px auto;
+}
+
+.container2{
+    position: relative;
+    display: inline;
+    margin: 0 auto;
+    top: 14vh;
+    max-height: 50vh;
+
+}
+
+.black{
+    color: black;
+}
+

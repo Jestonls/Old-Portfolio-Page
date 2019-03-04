@@ -2,7 +2,6 @@
 
 
 
-
   var d = new Date();
 
   var day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
@@ -186,25 +185,6 @@ document.getElementsByClassName("changeD")[i].onmouseout = function()
 getStylesheet();
 
 
-/*
-$( "li" ).hover(
-  function() {
-    $( this ).append( $( "<span> ***</span>" ) );
-  }, function() {
-    $( this ).find( "span:last" ).remove();
-  }
-);
-
-
- 
-$( "li.fade" ).hover(function() {
-  $( this ).fadeOut( 100 );
-  $( this ).fadeIn( 500 );
-});
-
-
-*/
-
 function hiding() {
   var x = document.getElementById("hidden");
   var y = document.getElementById("height100");
@@ -217,25 +197,39 @@ function hiding() {
   }
 }
 
-/*
+
 function hiding2() {
-  var x =   document.getElementById("hidden2").innerHTML='<object type="text/html" data="../unit-4-game/index.html" ></object>';
-  if (x) {
-    console.log("huh");
+  var z =   document.getElementById("hidden2");
+  z.innerHTML='<object type="text/html" data="../unit-4-game/index.html" ></object>';
+  if (z.style.display === "none") {
+    z.style.display = "block";
+    console.log("Mmhmm");
   } else {
-    return;
+    z.style.display = "none";
   }
 }
 
 
 function hiding3() {
-  var x = document.getElementById("hidden3");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-    
+  var xy = document.getElementById("hidden3");
+  xy.innerHTML='<object type="text/html" data="../TriviaGame/index.html" ></object>';
+  if (xy.style.display === "none") {
+    xy.style.display = "block";
+    console.log("Mmhmm");
   } else {
-    x.style.display = "none";
+    xy.style.display = "none";
   }
 }
 
-*/
+
+
+function hiding4() {
+  var z =   document.getElementById("hidden2");
+  z.innerHTML='<object type="text/html" data="../HW7/Giftastic/index.html" ></object>';
+  if (z.style.display === "none") {
+    z.style.display = "block";
+    console.log("Mmhmm");
+  } else {
+    z.style.display = "none";
+  }
+}
