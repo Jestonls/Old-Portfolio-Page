@@ -124,7 +124,7 @@ a:hover{
     position: relative;
     display: inline;
     margin: 0 auto;
-    top: 14vh;
+    top: 0vh;
     max-height: 50vh;
 
 }
@@ -133,3 +133,6 @@ a:hover{
     color: black;
 }
 
+.navbar{
+    position: relative;
+}

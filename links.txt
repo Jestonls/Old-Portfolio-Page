@@ -1,0 +1,46 @@
+var githubheroku = [
+https://jestonls.github.io/Bootstrap-Portfolio/,
+https://jestonls.github.io/Updated-Portfolio-Page/,
+https://jestonls.github.io/Psychic-Game/,
+https://jestonls.github.io/unit-4-game/,
+https://jestonls.github.io/TriviaGame/,
+https://jestonls.github.io/Giftastic/,
+https://jestonls.github.io/Train/,
+https://pure-peak-26700.herokuapp.com/,
+https://github.com/Jestonls/Liribot/,
+https://jestonls.github.io/bamazon/,
+https://ancient-waters-96999.herokuapp.com/,
+https://calm-lake-59280.herokuapp.com/
+]
+
+I might turn this into a json
+
+
+$('#thumb1').click(function()
+{
+    if($('#largephoto').click())
+    {
+        window.location.href = 'http://www.marioplanet.com/product.asp?IDnum=1';
+    }
+});
+
+
+
+00000
+
+var thumbClicked = false;
+
+$('#thumb1').click(function()
+{
+    thumbClicked = true;
+});
+
+$('#largephoto').click(function()
+{
+    if (thumbClicked)
+    {
+        window.location.href = 'http://www.marioplanet.com/product.asp?IDnum=1';
+    }
+});
+
+You will listen to the music you listened to when you were there

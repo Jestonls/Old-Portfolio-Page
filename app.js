@@ -1,36 +1,25 @@
 // check out http://www.w3schools.com/js/js_dates.asp
 
+var d = new Date();
 
-
-  var d = new Date();
-
-  var day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-
-console.log(d.getDay());
+var day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+solarsystem = [
+  {day:"Sunday" , foreground:"<img src='images/sun.png' />", background:"<img src='images/a.png' />"},
+  {day:"Monday" , foreground:"<img src='images/moon.png' />", background:"<img src='images/a.png' />"},
+  {day:"Tuesday" , foreground:"<img src='images/mars.png' />", background:"<img src='images/c.png' />"},
+  {day:"Wednesday" , foreground:"<img src='images/mercury.png' />", background:"<img src='images/a.png' />"},
+  {day:"Thursday" , foreground:"<img src='images/jupiter.png' />", background:"<img src='images/g.png' />"},
+  {day:"Friday" , foreground:"<img src='images/venus.png' />", background:"<img src='images/f.png' />"},
+  {day:"Saturday" , foreground:"<img src='images/saturn2.png' />", background:"<img src='images/b.png'/>"},
+];
 
 console.log(day[d.getDay()]);
 
-console.log(d.getMonth());
-
-var month = [];
-month[0] = "January";
-month[1] = "February";
-month[2] = "March";
-month[3] = "April";
-month[4] = "May";
-month[5] = "June";
-month[6] = "July";
-month[7] = "August";
-month[8] = "September";
-month[9] = "October";
-month[10] = "November";
-month[11] = "December";
-
+var month = ["January","February","March","April","May","June","July","August","September","October","November","December"]
 
 console.log(d.getHours());
 
 console.log(month[d.getMonth()]);
-
 console.log(d.getDate());
 console.log(d.getDay());
 console.log(d.getFullYear());
@@ -43,74 +32,53 @@ var hour = (d.getHours());
 console.log(hour);
 
 var amPm = " ";
-
 if (hour >= 11){
-  amPm = " pm";
-}else {
-  amPm = " am";
-}
-console.log(amPm);
+  amPm = " pm";}
+else {
+  amPm = " am";}
+if (hour === 0){
+  hour = 12;}
+else if (hour >= 13){
+  hour = hour - 12;}
 
-  if (hour === 0){
-       hour = 12;
-    }else if (hour >= 13){
-       hour = hour - 12;
-    }else if (hour >= 1 && hour <= 9 ) {
-        hour = "0" + hour;
-}
 console.log(hour);
 
 
 var n = day[d.getDay()];
 var m = month[d.getMonth()];
+console.log(month[d.getMonth()]);
+
 var min = d.getMinutes();
 var sec = d.getSeconds();
 
+var countdown = setInterval(function() {
+  sec++;
+  document.getElementById("time").innerHTML = hour + ":" + min + ":" + sec + amPm;
+  if (sec > 59) 
+    sec = 0,
+    min ++;
+    setInterval(countdown);
+  if (sec < 10)
+  document.getElementById("time").innerHTML = hour + ":" + min + ":" + "0" + sec + amPm;
+  if ( min < 10)
+  document.getElementById("time").innerHTML = hour + ":" + "0" + min + ":" + sec + amPm;
+}, 1000);
 
-if (min>=0 && min<=9){
-  min ="0" + min;
-}else {
-  min = min;
-}
 
-if (sec>=0 && sec<=9){
-    sec ="0" + sec;
-  }else {
-    sec = sec;
-  }
-
-  
 document.getElementById("today").innerHTML = n + ", " + " " + m + " " + d.getFullYear();
-
-document.getElementById("time").innerHTML = hour + ":" + min + ":";
-
-document.getElementById("seconds").innerHTML = sec;
-
-document.getElementById("dayNight").innerHTML = amPm;
-
-
-
-
-
 
 function getStylesheet() {
   var currentDay = new Date().getDay();
-  var weekDayBGL = document.getElementById('dayL');  
-  var weekDayBGR = document.getElementById('dayM');  
+  var background = document.getElementById('dayL');  
+  var foreground = document.getElementById('dayM');  
   
   /*trouble shooter finds you should style towards class since week 4 */
+
+
   var names = " ";
   for(var i=0; i<day.length; i++) {
-    names = day;
-    console.log(day[i]);
-    console.log(names[i]);
 
-
-console.log(names);
-console.log(this.name[i]);
-console.log(currentDay);
-
-document.getElementsByClassName("changeD")[i].onmouseover = function() 
+    document.getElementsByClassName("changeD")[i].onmouseover = function() 
 {
     this.style.color = "red";
     console.log(names);
@@ -118,16 +86,16 @@ document.getElementsByClassName("changeD")[i].onmouseover = function()
 var camp = (this).name
 
   if (currentDay === 0 || camp === "0") {//sunday
-    weekDayBGL.innerHTML = "<img src='images/a.png' />";
-    weekDayBGR.innerHTML = "<img src='images/sun.png' />";
+    background.innerHTML = "<img src='images/a.png' />";
+    foreground.innerHTML = "<img src='images/sun.png' />";
   }
   else{
     currentDay = camp;
   }
 
   if (currentDay === 1 || camp === "1") {//monday
-    weekDayBGL.innerHTML = "<img src='images/a.png' />";
-    weekDayBGR.innerHTML = "<img src='images/moon.png' />";
+    background.innerHTML = "<img src='images/a.png' />";
+    foreground.innerHTML = "<img src='images/moon.png' />";
 
   }
   else{
@@ -135,106 +103,126 @@ var camp = (this).name
   }
 
   if (currentDay === 2 || camp === "2") {//tuesday
-    weekDayBGL.innerHTML = "<img src='images/c.png' />";
-    weekDayBGR.innerHTML = "<img src='images/mars.png' />";
+    background.innerHTML = "<img src='images/c.png' />";
+    foreground.innerHTML = "<img src='images/mars.png' />";
   }
   else{
     currentDay = camp;
   }
 
   if (currentDay === 3 || camp === "3") {//wednesday
-    weekDayBGL.innerHTML = "<img src='images/a.png' />";
-    weekDayBGR.innerHTML = "<img src='images/mercury.png' />";
+    background.innerHTML = "<img src='images/a.png' />";
+    foreground.innerHTML = "<img src='images/mercury.png' />";
   }
   else{
     currentDay = camp;
   }
 
   if (currentDay === 4 || camp === "4") {//thursday
-    weekDayBGL.innerHTML = "<img src='images/g.png' />";
-    weekDayBGR.innerHTML = "<img src='images/jupiter.png' />";
+    background.innerHTML = "<img src='images/g.png' />";
+    foreground.innerHTML = "<img src='images/jupiter.png' />";
   }
   else{
     currentDay = camp;
   }
 
   if (currentDay === 5 || camp === "5") {//friday
-    weekDayBGL.innerHTML = "<img src='images/f.png' />";
-    weekDayBGR.innerHTML = "<img src='images/venus.png' />";
+    background.innerHTML = "<img src='images/f.png' />";
+    foreground.innerHTML = "<img src='images/venus.png' />";
   }
   else{
     currentDay = camp;
   }
 
   if (currentDay === 6 || camp === "6") {//saturday
-    weekDayBGL.innerHTML = "<img src='images/b.png'/>";
-    weekDayBGR.innerHTML = "<img src='images/saturn2.png' />";
+    background.innerHTML = "<img src='images/b.png'/>";
+    foreground.innerHTML = "<img src='images/saturn2.png' />";
   }
   else{
     currentDay = camp;
   }
 }
+ /*   names = day;
+    console.log(this.day);
+    console.log(names)
+ document.getElementsByClassName("changeD")[i].onmouseover = function() 
+{
+    this.style.color = "red";
+    var camp = (this).name
+    console.log((this).name);
+      console.log(camp)
+      for (let g = 0; g < solarsystem.length; g++) {
+
+      if (currentDay = solarsystem[g].day & (this).name) {
+      background.innerHTML = solarsystem[g].background;
+      console.log(solarsystem[g].background);
+      foreground.innerHTML = solarsystem[g].foreground;
+      } 
+      console.log(solarsystem[g].background);
+
+      }
+
+      if (this.style.color = "red") {
+      currentDay = (this).name;
+      console.log((this).name);
+      } 
+      }
+*/
 
 document.getElementsByClassName("changeD")[i].onmouseout = function() 
-    {
-    this.style.color = "white";
-    }
+{
+this.style.color = "white";
+}
 };
 }
 
 getStylesheet();
 
-
 function hiding() {
   var x = document.getElementById("hidden");
-  var y = document.getElementById("height100");
-  if (x.style.display === "none" && y.style.backgroundColor === "blue") {
+  if (x.style.display === "none") {
     x.style.display = "block";
-    y.style.backgroundColor = "blue";
   } else {
     x.style.display = "none";
-    y.style.backgroundColor = "blue";
   }
 }
 
+var githubheroku = [
+  { name: "Bootstrap Portfolio" ,link: "https://jestonls.github.io/Bootstrap-Portfolio/"},
+  { name: "Updated Portfolio" ,link: "https://jestonls.github.io/Updated-Portfolio-Page/"},
+  { name: "Psychic Game" ,link: "https://jestonls.github.io/Psychic-Game/"},
+  { name: "Crystal Game" ,link: "https://jestonls.github.io/unit-4-game/"},
+  { name: "Trivia Quiz" ,link: "https://jestonls.github.io/TriviaGame/"},
+  { name: "Giphy App" ,link: "https://jestonls.github.io/Giftastic/"},
+  { name: "Train Scheduler" ,link: "https://jestonls.github.io/Train/"},
+  { name: "Burger Logger" ,link: "https://pure-peak-26700.herokuapp.com/"},
+  { name: "Liri Inquirer" ,link: "https://github.com/Jestonls/Liribot/"},
+  { name: "Bamazon" ,link: "https://jestonls.github.io/bamazon/"},
+  { name: "Friend Finder App" ,link: "https://ancient-waters-96999.herokuapp.com/"},
+  { name: "Group Project 2" ,link: "https://calm-lake-59280.herokuapp.com/"}
+  ]
 
-function hiding2() {
-  var z =   document.getElementById("hidden2");
-  z.innerHTML='<object type="text/html" data="https://jestonls.github.io/Group-Project/index.html" ></object>';
-  if (z.style.display === "none") {
-    z.style.display = "block";
-    console.log("Mmhmm");
-  } else {
-    z.style.display = "none";
-  }
-}
+githubheroku.forEach(element => {
+  console.log(element.name);
+  ($("<button>" + element.name + "</button>").attr("href", element.link).addClass("btn btn-outline-primary text-light col-lg-2 change")).appendTo("#links");
+  var gallery =   document.getElementById("hidden2");
+  gallery.innerHTML='<object type="text/html" data="' + element.link + '" ></object>';
+  });
 
-
-function hiding3() {
-  var xy = document.getElementById("hidden3");
-  xy.innerHTML='<object type="text/html" data="https://jestonls.github.io/TriviaGame/index.html" ></object>';
-  if (xy.style.display === "none") {
-    xy.style.display = "block";
-    console.log("Mmhmm");
-  } else {
-    xy.style.display = "none";
-  }
-}
-
-
-
-function hiding4() {
-  var z =   document.getElementById("hidden2");
-  z.innerHTML='<object type="text/html" data="https://jestonls.github.io/Giftastic/index.html" ></object>';
-  if (z.style.display === "none") {
-    z.style.display = "block";
-    console.log("Mmhmm");
-  } else {
-    z.style.display = "none";
-  }
-}
-
-
-//https://jestonls.github.io/unit-4-game/
-//https://jestonls.github.io/Bootstrap-Portfolio/
-//https://jestonls.github.io/Train/
+  for (let c = 0; c < githubheroku.length; c++) {
+  var Clicked = false;
+  $('.change').click(function(){
+      Clicked = true;
+  });
+  $('.change').click(function()
+  {
+      if (Clicked = true){
+       console.log(this.getAttribute("href"));
+       for (let d = 0; d < githubheroku.length; d++) {
+        console.log(githubheroku[d].link);
+        if (githubheroku[d].link = this.getAttribute("href")){
+          window.open(this.getAttribute("href"),'_blank');}
+        }         
+      }
+      }); 
+    }

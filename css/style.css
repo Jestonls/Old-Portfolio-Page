@@ -6,40 +6,20 @@ a:hover{
     color: aquamarine;
 }
 
+.title{
+    font-family: 'Lobster', cursive;
+
+}
 .navbar{
     position: fixed;
-    top: 0px;
-    right: 0px;
-    margin: 0;
-    z-index: 4;
-    padding: 10px;
-    background-color: blue;
+    z-index: 7;
+    background-color: black;
     min-width: 100%;
     border-bottom: solid white 3px;
     height: 14vh;
 }
 
  body{
-    background-color: blue;
-}
-
-
-.background{
-    position: absolute;
-    z-index: 0;
-    left: 0px;
-    width: 100%;
-}
-
-
-.foreground{
-    position: absolute;
-    z-index: 2;
-    left: 0px;
-    width: 100%;
-    color: aliceblue;
-    font-size: 40px;
-    font-weight: 900;
     background-color: black;
 }
 
@@ -71,8 +51,7 @@ a:hover{
 
 .height100{
     min-height: 95vh;
-    
-    background-color: blue;
+    background-color: black;
 }
 
 .container{
@@ -164,7 +143,7 @@ border-left: dashed white 5px;
     min-width: 50vw;
     left: 0px;
     position: absolute;
-    background: linear-gradient(to right, transparent, blue);
+    background: linear-gradient(to right, transparent, black);
 }
 
 
@@ -252,36 +231,18 @@ border-left: dashed white 5px;
     min-height: 86vh;
     padding: 30px;
     }
-
-
-
-    #hidden3{
-    display: none;
-    position: absolute;
-    background-color: none;
-    z-index : 3;
-    }
-
-    #hidden3 object{
-    min-width: 99vw;
-    min-height: 86vh;
-    padding: 30px;
-    }
-    
-
-    #hidden4{
-    display: none;
-    position: absolute;
-    background-color: none;
-    z-index : 3;
-    }
-
-    #hidden4 object{
-    min-width: 99vw;
-    min-height: 86vh;
-    padding: 30px;
-    }
     
 #changeD{
     font-family: 'Courier New', Courier, monospace;
   }
+
+
+.opacity{
+    opacity: .3;
+}
+
+#links{
+    color: white;
+    z-index: 4;
+    position: relative;
+}
