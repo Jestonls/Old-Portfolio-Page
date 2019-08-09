@@ -1,0 +1,21 @@
+
+
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="2000"
+   height="1000"
+   id="solarSystemLines">
+  <defs id="localSolarSystemLines" />
+
+  <ellipse cx="800" cy="300" rx="750" ry="285" style="fill:none;stroke:white;stroke-width:2" />
+    <ellipse cx="800" cy="300" rx="563" ry="242" style="fill:none;stroke:white;stroke-width:2" />
+    <ellipse cx="800" cy="300" rx="416" ry="132" style="fill:none;stroke:white;stroke-width:2" />
+  
+    <ellipse cx="800" cy="300" rx="366" ry="120" style="fill:none;stroke:white;stroke-width:2" />
+    <ellipse cx="800" cy="300" rx="300" ry="100" style="fill:none;stroke:white;stroke-width:2" />
+    <ellipse cx="800" cy="300" rx="233" ry="72" style="fill:none;stroke:white;stroke-width:2" />
+    <ellipse cx="800" cy="300" rx="160" ry="40" style="fill:none;stroke:white;stroke-width:2" />
+    Sorry, your browser does not support inline SVG.  
+</svg>

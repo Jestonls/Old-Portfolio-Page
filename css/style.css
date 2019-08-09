@@ -13,30 +13,32 @@ a:hover{
 .navbar{
     position: fixed;
     z-index: 7;
-    background-color: black;
+    background: black;
     min-width: 100%;
     border-bottom: solid white 3px;
-    height: 14vh;
+    min-height: 14vh;
+    margin: 0 auto;
 }
 
  body{
     background-color: black;
 }
 
-.height100{
+#height100{
     position: relative;
-    top: 14vh;
+    top: 16vh;
     margin: 0 auto;
     padding: 0 auto;
-    background-color: white;
     border-bottom: solid white 5px;
-    overflow: hidden;
-}
-
+    overflow: hidden;    
+    min-height: 95vh;
+    background-color: black;
+}    
 
 .footer{
+    
     background-color: black;
-    display: inline-block;
+    display: block;
     position: relative;
     bottom: 0px;
     text-align: center;
@@ -49,16 +51,9 @@ a:hover{
     margin: 10vh 0 0 0;
 }
 
-.height100{
-    min-height: 95vh;
-    background-color: black;
-}
-
 .container{
     min-width: 80%;
-}
-.container2{
-    min-width: 100%;
+    
 }
 
 .six{
@@ -74,20 +69,18 @@ a:hover{
     padding-bottom: 65vh;
 }
 
-.arrow{
-min-width: 20%;
-position: absolute;
-right: 0px;
-color: white;
-height: 80%;
-top: 110vh;
-border-left: dashed white 5px;
+.carousel-control-prev{
+    background-color: black;
+    opacity: 1;
+    max-width: 5vw;
+}
+.carousel-control-next{
+    background-color: black;
+    opacity: 1;
+    max-width: 5vw;
+
 }
 
-
-.huge{
-    font-size: 20vh;
-}
 
 #time{
     position: relative;
@@ -107,14 +100,32 @@ border-left: dashed white 5px;
     
 }
 
+
+#clock{
+    z-index: 3;
+    position: absolute;
+}
+
+
+#hidden2{
+    display: none;
+    background-color: none;
+    position: absolute;
+    z-index : 3;
+    }
+
+#hidden2 object{
+min-width: 99vw;
+min-height: 86vh;
+display: block;
+}
+
 #dayNight{
     position: relative;
     display: inline-block;
     bottom: 30vh;
     color: white;
     font-size: 12vh;
-    top: 50vh;
-    
 }
 
 #today{
@@ -123,126 +134,48 @@ border-left: dashed white 5px;
     color: white;
     font-size: 6vh;
 }
-
-
-#dayL{
-    height: 99%;
-    z-index: 0;
-    overflow: hidden;
-    margin: 0 auto;
-    max-width: 50vw;
-    left: 0px;
-    position: absolute;
-}
-
-#dayLGrad{
-    height: 99%;
-    z-index: 2;
-    overflow: hidden;
-    margin: 0 auto;
-    min-width: 50vw;
-    left: 0px;
-    position: absolute;
-    background: linear-gradient(to right, transparent, black);
-}
-
-
-#dayL img{
-    left: 0px;
-    max-width: 50vw;
-    z-index: 1;
-}
-
-#dayM{
-    height: 50vh;
-    max-width: 50%;
-    overflow: hidden;
-    float: right;
-    right: 60vw;
-    position: absolute;
-    overflow: visible;
-}
-
-#dayM img{
-
-    width: 50vw;
-    margin: 0 auto;
-    position: absolute;
-    z-index: 2;
-}
-
-
-#dayR{
-    min-height: 99vh;
-    max-width: 50%;
-    overflow: hidden;
-    float: right;
-    right: 0px;
-    position: absolute;
-    top: 0px;
-    background-color: none;
-    z-index: 3;
-    word-wrap: break-word;
-
-}
-
-#dayR a{
-    color: white;
-    font-size: 3rem;
+ #dayR{
     display: block;
-    text-align: right;
-    margin: 0 20px auto auto;
-}
+    position: relative;
+    margin-top: 14vh;
+ }
 
-#clock{
-    z-index: 3;
-    position: absolute;
-}
-
-@keyframes rotate {
-    0%   {-webkit-transform: rotate(0deg);}
-    100%   {-webkit-transform: rotate(6deg);}
-}
-  
-  /* The element to apply the animation to */
-  .rotation {
-    animation-name: rotate;
-    animation-duration: 12s;
-    animation-iteration-count: infinite;
-    z-index: 2;
-}
-
-    #hidden{
-    display: none;
-    background-color: black;
+ @media screen and (min-width: 0px) {
+    .smallDown{
+        position: relative;
+        margin-bottom: -14vh;
     }
 
+    #dayR{
+        display: none;
+        position: relative;
+        margin: 0 auto;
+     }
 
-
-    #hidden2{
-    display: none;
-    background-color: none;
-    position: absolute;
-    z-index : 3;
-    }
-
-    #hidden2 object{
-    min-width: 99vw;
-    min-height: 86vh;
-    padding: 30px;
-    }
-    
-#changeD{
-    font-family: 'Courier New', Courier, monospace;
   }
 
+@media screen and (min-width: 768px) {
+    .smallDown{
+        position: relative;
+        margin-bottom: -14vh;
+    }
 
-.opacity{
-    opacity: .3;
-}
+    #dayR{
+        display: block;
+        position: relative;
+        margin-top: 20vh;
+    
+     }
 
-#links{
-    color: white;
-    z-index: 4;
-    position: relative;
+  }
+ 
+  #links{
+    display: inline;
 }
+  @media screen and (max-width: 768px) {
+    #links{
+       display: none;
+
+    }
+}
+    
